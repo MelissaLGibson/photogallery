@@ -1,47 +1,186 @@
+*{
+    box-sizing:border-box;
+}
+/*
+    SMALL/TABLET LAYOUT
+*/
+@media screen and (min-width: 485px){
 html{
-    font-family: Bell MT, sans-serif;
-    background-color: lightgray;
-    color: darkorchid;
+    font-family: Arial, Helvetica, sans-serif;
     padding: 20px;
+    text-align: center;
+    margin: 0 auto;
 }
 body{
-    background-color: lightgreen;
+    background-color: #000000;
+    color: #ffffff;
     padding: 20px;
+    width: 100%;
+    
 }
+/*
+    HEADERS
+*/
 header{
-    background-color:lightblue;
-    border: 3px solid blue;
-    padding: 20px;
-    margin: 20px;
+    background-color:#ffffff;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0px;
 }
-h1{
-    color: green;
+h1 {
+    font-size: 3em;
+    color: #007d7b;
+    margin: 0px;
+    padding: 0px;
 }
-h2{
-    color: violet;
+h2 {
+    font-size: 2em;
+    padding-top: 10px;
 }
-h3{
-    color: cyan;
+/*
+    NAVIGATION
+*/
+nav{
+    width: 100%;
+    height: 50px;
+    margin: 0px auto;
 }
-h4{
-    color: orange;
+h1, h2 {
+    text-transform: uppercase;
 }
-aside{
-    background-color:lightgoldenrodyellow;
-    border: 3px solid purple;
-    z-index: 1;
-}
-main{
-    background-color: pink;
-    border: 3px solid deeppink;
-    padding: 20px;
-    margin: 20px;
-}
+nav ul {
+    height: auto;
+    width: auto;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
 
-
+}
+nav a {
+    display:block;
+    text-decoration: none;
+    font-size: 1.5em;
+    float: left;
+    margin: 5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    
+}
+/*
+    MAIN
+*/
+main {
+    background-color: #ffffff;
+    color: #000000;
+}
+.gridContainer{ 
+    display: grid;
+    background-color:#ffffff;
+    color: #000000;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(1, 1fr) ;
+    grid-gap: 5px;
+}
+img {
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 0 auto;
+    display: flex;
+    width: 95%;
+}
+p {
+    font-size: 1.25em;
+    text-align: left;
+    padding-left: 20px;
+}
+/*
+    FIGURE AND FIGCAPTION
+*/
+figure{
+    margin:0 auto;
+    padding: 0px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+}
+figcaption{
+    position:absolute;
+    bottom: 90%;
+    top: 5%;
+} 
+.iran-ireland{
+    bottom: 95%;
+}
+.italy{
+    top: 95%;
+}
+.captionBottom{
+    top: 90%;
+}
+.figCaptionWhite{ /* CHILE */
+    color: #ffffff;
+}
+figcaption, label, input, small {
+    font-size: 1em;
+    text-transform: uppercase;
+}
+/*
+    FORM
+*/
+.submitButton{
+    background-color:#007d7b;
+    border-radius: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.label {
+    text-align: left;
+}
+input {
+    width: 100%;
+    color: #007d7b;
+    font-weight: bold;
+}
+/*
+    FOOTER
+*/
 footer{
-    background-color: lightyellow;
-    border: 3px solid yellow;
-    padding: 20px;
-    margin: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0px 20px;
+    margin: 0 auto;
+    height: auto;
+    width: 80%;
+    justify-content: center;
+}
+footer p {
+    text-align: center;
+}
+}
+/*
+    MEDIUM/TABLET LAYOUT
+*/
+@media screen and (min-width: 880px){
+
+.gridContainer{ /* MAIN */
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(1, 1fr) ;
+}
+}
+/*
+    LARGE/DESKTOP LAYOUT
+*/
+@media screen and (min-width: 1300px){
+nav ul{
+    justify-content: right;
+}
+.gridContainer{ /* MAIN */
+    grid-template-columns: auto auto auto;
+    grid-template-rows: repeat(1, 1fr);
+}
+
 }
